@@ -4,9 +4,13 @@ import {
   MessageSquare, 
   Repeat, 
   MapPin, 
-  ArrowRight 
+  ArrowRight,
+  Play,
+  X
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
+import { useState } from "react";
 import websiteImg from "@assets/generated_images/mobile_phone_showing_contractor_website.png";
 import seoImg from "@assets/generated_images/abstract_digital_network_or_map_for_local_seo.png";
 
@@ -139,6 +143,16 @@ const features = [
 ];
 
 export function Features() {
+  const [selectedDemo, setSelectedDemo] = useState<string | null>(null);
+
+  const demoVideos: Record<string, string> = {
+    "website": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "reviews": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "missed-call": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "marketing": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "seo": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  };
+
   return (
     <section id="features" className="py-24 bg-background relative">
       <div className="container mx-auto px-4">
@@ -169,9 +183,13 @@ export function Features() {
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
                   {feature.description}
                 </p>
-                <Button variant="link" className="text-primary p-0 h-auto text-base font-semibold hover:text-white transition-colors group">
-                  Learn more <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <button 
+                  onClick={() => setSelectedDemo(feature.id)}
+                  className="text-primary p-0 h-auto text-base font-semibold hover:text-white transition-colors group flex items-center gap-2"
+                >
+                  <Play className="w-4 h-4" />
+                  View Quick Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
 
               {/* Visual Content */}
@@ -193,6 +211,29 @@ export function Features() {
           ))}
         </div>
       </div>
+
+      {/* Video Demo Modal */}
+      <Dialog open={!!selectedDemo} onOpenChange={(open) => !open && setSelectedDemo(null)}>
+        <DialogContent className="bg-background border-white/10 max-w-4xl p-0 overflow-hidden">
+          <div className="relative w-full bg-black aspect-video">
+            {selectedDemo && demoVideos[selectedDemo] && (
+              <iframe
+                width="100%"
+                height="100%"
+                src={demoVideos[selectedDemo]}
+                title="Quick Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0"
+              />
+            )}
+          </div>
+          <DialogClose className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors">
+            <X className="h-6 w-6 text-white" />
+          </DialogClose>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
