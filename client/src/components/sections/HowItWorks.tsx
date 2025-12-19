@@ -1,4 +1,7 @@
 import { Phone, Code2, Rocket } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { BookDemoModal } from "./BookDemoModal";
 
 const steps = [
   {
@@ -22,6 +25,8 @@ const steps = [
 ];
 
 export function HowItWorks() {
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
+
   return (
     <section id="how-it-works" className="py-24 bg-card border-y border-white/5">
       <div className="container mx-auto px-4">
@@ -51,7 +56,20 @@ export function HowItWorks() {
             </div>
           ))}
         </div>
+
+        <div className="flex justify-center mt-16">
+          <Button
+            size="lg"
+            onClick={() => setDemoModalOpen(true)}
+            className="bg-primary hover:bg-primary/90 text-background font-bold text-lg h-14 px-10 rounded-full"
+            data-testid="button-book-demo-how-it-works"
+          >
+            Ready to Get Started?
+          </Button>
+        </div>
       </div>
+
+      <BookDemoModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />
     </section>
   );
 }
