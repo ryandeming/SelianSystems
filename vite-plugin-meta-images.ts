@@ -4,18 +4,14 @@ import path from 'path';
 
 /**
  * Vite plugin that updates og:image and twitter:image meta tags
- * to point to the app's opengraph image with the correct Replit domain.
+ * to point to the app's opengraph image with the correct deployment URL.
  */
 export function metaImagesPlugin(): Plugin {
   return {
     name: 'vite-plugin-meta-images',
     transformIndexHtml(html) {
       const baseUrl = getDeploymentUrl();
-      if (!baseUrl) {
-        log('[meta-images] no Replit deployment domain found, skipping meta tag updates');
-        return html;
-      }
-
+      
       // Check if opengraph image exists in public directory
       const publicDir = path.resolve(process.cwd(), 'client', 'public');
       const opengraphPngPath = path.join(publicDir, 'opengraph.png');
@@ -36,9 +32,12 @@ export function metaImagesPlugin(): Plugin {
         return html;
       }
 
-      const imageUrl = `${baseUrl}/opengraph.${imageExt}`;
+      // If we have a base URL, use absolute URL; otherwise use relative path
+      const imageUrl = baseUrl ? `${baseUrl}/opengraph.${imageExt}` : `/opengraph.${imageExt}`;
 
-      log('[meta-images] updating meta image tags to:', imageUrl);
+      if (baseUrl) {
+        log('[meta-images] updating meta image tags to:', imageUrl);
+      }
 
       html = html.replace(
         /<meta\s+property="og:image"\s+content="[^"]*"\s*\/>/g,
@@ -56,6 +55,14 @@ export function metaImagesPlugin(): Plugin {
 }
 
 function getDeploymentUrl(): string | null {
+  // Check for VITE_PUBLIC_URL first (for production deployments like Laravel Forge)
+  if (process.env.VITE_PUBLIC_URL) {
+    const url = process.env.VITE_PUBLIC_URL.replace(/\/$/, ''); // Remove trailing slash
+    log('[meta-images] using VITE_PUBLIC_URL:', url);
+    return url;
+  }
+
+  // Replit support (for backwards compatibility)
   if (process.env.REPLIT_INTERNAL_APP_DOMAIN) {
     const url = `https://${process.env.REPLIT_INTERNAL_APP_DOMAIN}`;
     log('[meta-images] using internal app domain:', url);
