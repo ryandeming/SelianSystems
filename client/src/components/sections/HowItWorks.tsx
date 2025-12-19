@@ -57,14 +57,17 @@ export function HowItWorks() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-16">
+        <div className="flex flex-col items-center justify-center gap-6 mt-16">
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-white">
+            Ready to Get Started?
+          </h3>
           <Button
             size="lg"
             onClick={() => setDemoModalOpen(true)}
             className="bg-primary hover:bg-primary/90 text-background font-bold text-lg h-14 px-10 rounded-full"
             data-testid="button-book-demo-how-it-works"
           >
-            Ready to Get Started?
+            Book a Demo
           </Button>
         </div>
       </div>
