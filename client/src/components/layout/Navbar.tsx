@@ -30,6 +30,7 @@ export function Navbar() {
 
         {/* Desktop Nav - Left Side */}
         <div className="hidden md:flex items-center gap-8">
+          <Link href="/" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer decoration-none">Home</Link>
           <Link href="/how-it-works" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer decoration-none">How it Works</Link>
           <Link href="/pricing" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer decoration-none">Pricing</Link>
           <Link href="/about" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer decoration-none">About</Link>
@@ -56,6 +57,7 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="bg-background border-l-white/10">
             <div className="flex flex-col gap-6 mt-10">
+              <Link href="/" className="text-lg font-medium text-white decoration-none cursor-pointer">Home</Link>
               <Link href="/how-it-works" className="text-lg font-medium text-white decoration-none cursor-pointer">How it Works</Link>
               <Link href="/pricing" className="text-lg font-medium text-white decoration-none cursor-pointer">Pricing</Link>
               <Link href="/about" className="text-lg font-medium text-white decoration-none cursor-pointer">About</Link>
