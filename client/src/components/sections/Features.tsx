@@ -167,7 +167,7 @@ export function Features() {
           {features.map((feature, index) => (
             <div 
               key={feature.id} 
-              className={`flex flex-col ${feature.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}
+              className={`flex flex-col ${feature.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-6 lg:gap-20`}
             >
               {/* Text Content */}
               <div className="flex-1">
@@ -177,13 +177,13 @@ export function Features() {
                 <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-white/70 text-lg leading-relaxed mb-8">
+                <p className="text-white/70 text-lg leading-relaxed">
                   {feature.description}
                 </p>
                 {demoVideos[feature.id] && (
                   <button 
                     onClick={() => setSelectedDemo(feature.id)}
-                    className="text-primary p-0 h-auto text-base font-semibold hover:text-white transition-colors group flex items-center gap-2"
+                    className="text-primary p-0 h-auto text-base font-semibold hover:text-white transition-colors group flex items-center gap-2 mt-4"
                   >
                     <Play className="w-4 h-4" />
                     View Quick Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
