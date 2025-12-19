@@ -28,11 +28,17 @@ export function Navbar() {
           SELIAN<span className="text-primary">SYSTEMS</span>
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav - Left Side */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/about" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer decoration-none">About</Link>
+          <a href="#features" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Features</a>
+          <a href="#how-it-works" className="text-sm font-medium text-white/80 hover:text-white transition-colors">How it Works</a>
           <Link href="/pricing" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer decoration-none">Pricing</Link>
-          <a href="https://portal.seliansystems.com" className="text-lg font-medium text-white decoration-none cursor-pointer">Login</a>
+          <Link href="/about" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer decoration-none">About</Link>
+        </div>
+
+        {/* Desktop Nav - Right Side */}
+        <div className="hidden md:flex items-center gap-4">
+          <a href="https://portal.seliansystems.com" className="text-sm font-medium text-white/80 hover:text-white transition-colors decoration-none cursor-pointer">Login</a>
           <Button 
             onClick={() => setDemoModalOpen(true)}
             className="bg-primary hover:bg-primary/90 text-background font-bold rounded-full px-6"
