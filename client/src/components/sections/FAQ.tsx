@@ -2,6 +2,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
+    id: "0",
+    question: "When am I going to start seeing results?",
+    answer: "That depends on your current situation. If you have a website and some reviews, you might see results in 30-90 days. If you're starting from scratch, it could take 3-6 months to see a noticable difference. The most important is that you commit to using our system. If you think you're going to pay us $247 a month and we're going to magically make you rich, we're probably not the right fit for you. We're here to help grow your business by giving your online business a solid foundation, not perform miracles. Explain how you help me grow my business"
+  },
+  {
     id: "1",
     question: "How long does it take to set up?",
     answer: "We handle the setup in 7-10 days. You provide your business info, and we build your website, CRM, and automation system. Then we do a 25-minute launch call to walk you through everything."
@@ -29,7 +34,7 @@ const faqs = [
   {
     id: "6",
     question: "Do you handle the follow-up for me?",
-    answer: "We automate the follow-up for you. Missed calls get a text, reviews get automatic reminders, and old customers get marketing campaigns—all hands-free."
+    answer: "No. We automate parts of your follow-up process, but we don't do the actual follow-up for you. We believe in building systems that work for you, not replace you. You still need to be the one to follow up with your leads."
   },
   {
     id: "7",
@@ -69,16 +74,26 @@ export function FAQ() {
                 </AccordionTrigger>
                 <AccordionContent className="text-white/70 pb-5 pt-0">
                   {faq.answer}
+                  { (faq.id === "0") &&
+                    <div>
+                  <span className="text-primary font-bold block text-xl my-6">Explain how you help me grow my business</span>
+                  <p className="font-bold my-4">No problem.</p>
+                  <ol className="font-bold my-4 leading-loose">
+                    <li>1. Do you believe having more 5 star reviews will attract more customers?</li>
+                    <li>2. Do you believe that having a professional website that really works will help you convert more visitors into leads?</li>
+                    <li>3. Do you believe that immediately following up with incoming leads will make them more likely to book a job?</li>
+                    <li>4. Do you believe that automated re-marketing campaigns will make old customers more likely to work with you again?</li>
+                    <li>5. Do you believe offering discounts for friends and family of your previous customers will increase the number of referrals you get?</li>
+                    <li>6. Do you believe using automated systems could free you from the monotony of doing boring business tasks and give you more time for other things?</li>
+                    <li>7. Do you believe having these types of systems in place is important for growing your business?</li>
+                  </ol>
+                  <p className="font-bold my-4">If you answered yes to any of these questions, then we can help you.</p>
+                       </div>
+                }
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-white/60">
-            Still have questions? <a href="#" className="text-primary hover:text-primary/80 transition-colors font-semibold">Get in touch</a>
-          </p>
         </div>
       </div>
     </section>
