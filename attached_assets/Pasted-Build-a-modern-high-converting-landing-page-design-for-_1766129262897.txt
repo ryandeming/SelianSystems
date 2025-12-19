@@ -1,0 +1,29 @@
+Build a modern, high-converting landing page design for a company called “Selian Systems.”  
+
+Selian Systems helps contractors (plumbers, electricians, roofers, HVAC techs, etc.) get and convert more leads using simple marketing and CRM tools.  
+The website should feel bold, confident, and contractor-friendly — no corporate stock-photo vibes, no fluff, just clean design and strong messaging.
+
+**Design details:**
+- Overall theme: Navy blue (#0A1931) as primary background color, paired with white text and bright accent colors like orange (#FF914D) or yellow for CTAs.  
+- Font style: Bold, readable sans-serif (like Inter, Montserrat, or Poppins).  
+- Imagery: Use background photos of contractors working (realistic, authentic) and icons representing calls, websites, messages, and reviews.  
+- Layout:  
+  - Hero section with headline, subheadline, and CTA (“Book a Demo”).  
+  - Following sections that visually break up into cards or strips for each feature:
+      - Functional Website  
+      - Review System  
+      - Missed Call Text-Back  
+      - Marketing Campaigns  
+      - Local SEO  
+  - Include a 3-step “How It Works” timeline and a “Why Choose Us” feature block with simple icons.  
+  - End with a CTA banner (“Stop missing leads. Start closing jobs.”).  
+- Buttons: Rounded edges, bold accent color (orange or yellow), hover effects.  
+- Typography: Headlines large and confident, body text medium weight with good contrast against the navy background.  
+- Mobile responsive design required.  
+- Include smooth scrolling and anchor links to sections from top nav.  
+- Keep spacing generous and layout simple — everything should feel rugged, functional, and easy to read.
+
+**Tone and vibe:**  
+Professional but laid-back. No marketing jargon. The website should feel like it was built for people who prefer tools over tech.  
+
+End result: A strong, contractor-friendly landing page design with a navy-blue color scheme, bold typography, and easy call-to-action flow focused on lead generation.
