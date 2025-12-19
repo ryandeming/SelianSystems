@@ -53,7 +53,7 @@ export function Footer() {
               <li><a href="#" className="text-white/60 hover:text-primary transition-colors">About</a></li>
               <li><a href="#" className="text-white/60 hover:text-primary transition-colors">Features</a></li>
               <li><a href="#" className="text-white/60 hover:text-primary transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-white/60 hover:text-primary transition-colors">Contact</a></li>
+              <li><button onClick={() => setDemoModalOpen(true)} className="text-white/60 hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0 font-inherit" data-testid="button-contact-footer">Contact</button></li>
             </ul>
           </div>
           

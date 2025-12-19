@@ -42,19 +42,20 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
     try {
       const bearerToken = import.meta.env.VITE_SELIAN_API_TOKEN || "";
       
-      const response = await fetch("https://portal.seliansystems.com/api/leads", {
+      const response = await fetch("https://unweaned-svetlana-pisolitic.ngrok-free.dev/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           ...(bearerToken && { "Authorization": `Bearer ${bearerToken}` }),
         },
         body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
+          first_name: formData.firstName,
+          last_name: formData.lastName,
           email: formData.email,
           phone: formData.phone,
-          preferredContactMethod: formData.preferredMethod,
-          message: formData.message,
+          source: "webform",
+          preferred_contact_method: formData.preferredMethod,
+          details: formData.message,
         }),
       });
 

@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import { useState } from "react";
-import websiteImg from "@assets/generated_images/mobile_phone_showing_contractor_website.png";
+import websiteImg from "@assets/generated_images/mobile_phone_contractor_site.webp";
 import seoImg from "@assets/generated_images/abstract_digital_network_or_map_for_local_seo.png";
 
 const features = [
@@ -101,12 +101,12 @@ const features = [
           <div className="space-y-2 mt-4">
             <div className="flex justify-end">
               <div className="bg-blue-500 text-white rounded-2xl rounded-tr-md px-3 py-2 max-w-[80%] text-sm">
-                Hey! Special offer: 20% off this month!
+                Hey Josh, it's Mike from MainLineFlow. It was a pleasure working with you! I'm offering 10% off your next job and this discount applies to your friends and family as well :)
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-gray-700 text-white rounded-2xl rounded-tl-md px-3 py-2 max-w-[80%] text-sm">
-                Thanks! I'm interested 👍
+                Thanks! I'll tell my brother
               </div>
             </div>
           </div>
@@ -122,9 +122,6 @@ const features = [
             <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
               <div className="text-2xl font-bold text-primary mb-1">12</div>
               <div className="text-xs text-white/50">New Jobs</div>
-            </div>
-            <div className="col-span-2 bg-primary hover:bg-primary/90 transition-colors p-3 rounded-lg flex items-center justify-center cursor-pointer">
-              <span className="font-bold text-background text-sm">Launch Campaign</span>
             </div>
           </div>
         </div>

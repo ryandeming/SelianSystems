@@ -35,7 +35,7 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-            No agency fluff. No spreadsheets. Just simple marketing and tools that help contractors build, track, and convert leads into
+            No agency fluff. We build you a custom website and give you the tools that help contractors build, track, and convert leads into
             cash.
           </p>
 
