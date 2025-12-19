@@ -42,7 +42,7 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
     try {
       const bearerToken = import.meta.env.VITE_SELIAN_API_TOKEN || "";
       
-      const response = await fetch("https://unweaned-svetlana-pisolitic.ngrok-free.dev/api/leads", {
+      const response = await fetch("https://portal.seliansystems.com/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
