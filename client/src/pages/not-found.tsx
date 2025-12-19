@@ -1,7 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
+import { useMetaTags } from "@/hooks/use-meta-tags";
 
 export default function NotFound() {
+  useMetaTags({
+    title: "404 - Page Not Found | Selian Systems",
+    description: "The page you're looking for doesn't exist. Return to Selian Systems homepage.",
+    ogTitle: "404 - Page Not Found | Selian Systems",
+    ogDescription: "The page you're looking for doesn't exist.",
+  });
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
       <Card className="w-full max-w-md mx-4">

@@ -9,6 +9,7 @@ import Home from "@/pages/home";
 import Pricing from "@/pages/pricing";
 import About from "@/pages/about";
 import HowItWorksPage from "@/pages/how-it-works";
+import Review from "@/pages/review";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -29,6 +30,7 @@ function Router() {
         <Route path="/pricing" component={Pricing} />
         <Route path="/about" component={About} />
         <Route path="/how-it-works" component={HowItWorksPage} />
+        <Route path="/review" component={Review} />
         <Route component={NotFound} />
       </Switch>
     </>

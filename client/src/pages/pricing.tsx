@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { BookDemoModal } from "@/components/sections/BookDemoModal";
+import { useMetaTags } from "@/hooks/use-meta-tags";
 
 const features = [
   "Full Custom Website (5-10 pages)",
@@ -15,6 +16,13 @@ const features = [
 ];
 
 export default function Pricing() {
+  useMetaTags({
+    title: "Pricing - Selian Systems",
+    description: "Simple pricing. No surprises. One plan with everything you need to build, track, and convert leads. Built for contractors. $247/month.",
+    ogTitle: "Pricing - Selian Systems",
+    ogDescription: "Simple pricing. No surprises. One plan with everything you need to build, track, and convert leads. Built for contractors.",
+  });
+
   const [demoModalOpen, setDemoModalOpen] = useState(false);
 
   return (

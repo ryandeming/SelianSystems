@@ -1,8 +1,16 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { useMetaTags } from "@/hooks/use-meta-tags";
 
 export default function HowItWorksPage() {
+  useMetaTags({
+    title: "How It Works - Selian Systems",
+    description: "Three simple steps. No complicated onboarding. No months of back-and-forth. Just straightforward processes designed for contractors. See how we build your lead generation system.",
+    ogTitle: "How It Works - Selian Systems",
+    ogDescription: "Three simple steps. No complicated onboarding. Just straightforward processes designed for contractors.",
+  });
+
   // Update this URL with your actual video URL (YouTube, Vimeo, or hosted video)
   const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ";
 

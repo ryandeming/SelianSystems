@@ -4,8 +4,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { BookDemoModal } from "@/components/sections/BookDemoModal";
+import { useMetaTags } from "@/hooks/use-meta-tags";
 
 export default function About() {
+  useMetaTags({
+    title: "About Us - Selian Systems",
+    description: "We built Selian Systems for contractors, not marketers. Simple, effective tools designed for people who actually fix things. No agency fluff, no complicated software.",
+    ogTitle: "About Us - Selian Systems",
+    ogDescription: "We built Selian Systems for contractors, not marketers. Simple, effective tools designed for people who actually fix things.",
+  });
+
   const [demoModalOpen, setDemoModalOpen] = useState(false);
 
   return (
