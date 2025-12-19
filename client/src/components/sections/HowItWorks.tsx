@@ -57,18 +57,24 @@ export function HowItWorks() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-6 mt-16">
-          <h3 className="text-2xl md:text-3xl font-display font-bold text-white">
-            Ready to Get Started?
-          </h3>
-          <Button
-            size="lg"
-            onClick={() => setDemoModalOpen(true)}
-            className="bg-primary hover:bg-primary/90 text-background font-bold text-lg h-14 px-10 rounded-full"
-            data-testid="button-book-demo-how-it-works"
-          >
-            Book a Demo
-          </Button>
+        <div className="mt-20 pt-20 border-t border-white/10">
+          <div className="max-w-2xl mx-auto bg-gradient-to-br from-white/5 to-primary/5 border border-white/10 rounded-3xl p-12 text-center backdrop-blur-sm hover:border-primary/30 transition-colors duration-300">
+            <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full opacity-10 -z-10 pointer-events-none" />
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-white/60 mb-8 text-lg">
+              Let's build your lead generation system in just 10 days.
+            </p>
+            <Button
+              size="lg"
+              onClick={() => setDemoModalOpen(true)}
+              className="bg-primary hover:bg-primary/90 text-background font-bold text-lg h-14 px-12 rounded-full shadow-[0_0_20px_-5px_rgba(255,145,77,0.5)]"
+              data-testid="button-book-demo-how-it-works"
+            >
+              Book a Demo
+            </Button>
+          </div>
         </div>
       </div>
 
