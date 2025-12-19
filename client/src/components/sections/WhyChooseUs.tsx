@@ -31,7 +31,7 @@ export function WhyChooseUs() {
           <div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
               Why We're Different <br />
-              <span className="text-white/40 text-2xl md:text-3xl leading-tight">(But Also Not Pretending To Be Magic)</span>
+              <span className="text-white/40 text-2xl md:text-3xl">(But Also Not Pretending To Be Magic)</span>
             </h2>
             <p className="text-lg text-white/70 mb-8">
               No agency has a secret "hack" to make you rich overnight. 

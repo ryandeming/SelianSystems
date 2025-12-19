@@ -7,7 +7,7 @@ import {
   ArrowRight 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import websiteImg from "@assets/image.webp";
+import websiteImg from "@assets/generated_images/mobile_phone_showing_contractor_website.png";
 import seoImg from "@assets/generated_images/abstract_digital_network_or_map_for_local_seo.png";
 
 const features = [
@@ -97,7 +97,7 @@ const features = [
           <div className="space-y-2 mt-4">
             <div className="flex justify-end">
               <div className="bg-blue-500 text-white rounded-2xl rounded-tr-md px-3 py-2 max-w-[80%] text-sm">
-                Hey it's Ryan from MainLineFlow. It was a pleasure working with you, I'm offering 10% off your next job and this applies to friends and family too!
+                Hey! Special offer: 20% off this month!
               </div>
             </div>
             <div className="flex justify-start">
@@ -118,6 +118,9 @@ const features = [
             <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
               <div className="text-2xl font-bold text-primary mb-1">12</div>
               <div className="text-xs text-white/50">New Jobs</div>
+            </div>
+            <div className="col-span-2 bg-primary hover:bg-primary/90 transition-colors p-3 rounded-lg flex items-center justify-center cursor-pointer">
+              <span className="font-bold text-background text-sm">Launch Campaign</span>
             </div>
           </div>
         </div>
