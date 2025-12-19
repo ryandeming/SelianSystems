@@ -3,9 +3,11 @@ import { Link } from "wouter";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { BookDemoModal } from "@/components/sections/BookDemoModal";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +33,11 @@ export function Navbar() {
           <a href="#features" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Features</a>
           <a href="#how-it-works" className="text-sm font-medium text-white/80 hover:text-white transition-colors">How it Works</a>
           <a href="#why-us" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Why Us</a>
-          <Button className="bg-primary hover:bg-primary/90 text-background font-bold rounded-full px-6">
+          <Button 
+            onClick={() => setDemoModalOpen(true)}
+            className="bg-primary hover:bg-primary/90 text-background font-bold rounded-full px-6"
+            data-testid="button-book-demo-nav"
+          >
             Book a Demo
           </Button>
         </div>
@@ -48,13 +54,21 @@ export function Navbar() {
               <a href="#features" className="text-lg font-medium text-white">Features</a>
               <a href="#how-it-works" className="text-lg font-medium text-white">How it Works</a>
               <a href="#why-us" className="text-lg font-medium text-white">Why Us</a>
-              <Button className="bg-primary hover:bg-primary/90 text-background font-bold w-full">
+              <Button 
+                onClick={() => {
+                  setDemoModalOpen(true);
+                }}
+                className="bg-primary hover:bg-primary/90 text-background font-bold w-full"
+                data-testid="button-book-demo-mobile"
+              >
                 Book a Demo
               </Button>
             </div>
           </SheetContent>
         </Sheet>
       </div>
+
+      <BookDemoModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />
     </nav>
   );
 }

@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { BookDemoModal } from "./BookDemoModal";
 
 export function Footer() {
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
+
   return (
     <footer className="bg-card border-t border-white/10 pt-20 pb-10">
       <div className="container mx-auto px-4">
@@ -13,7 +17,12 @@ export function Footer() {
               START CLOSING JOBS.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-background text-primary hover:bg-white font-bold text-lg h-14 px-10 rounded-full">
+              <Button 
+                size="lg" 
+                onClick={() => setDemoModalOpen(true)}
+                className="bg-background text-primary hover:bg-white font-bold text-lg h-14 px-10 rounded-full"
+                data-testid="button-book-demo-footer"
+              >
                 Book Your Demo
               </Button>
             </div>
@@ -61,6 +70,8 @@ export function Footer() {
           © {new Date().getFullYear()} Selian Systems. All rights reserved.
         </div>
       </div>
+
+      <BookDemoModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />
     </footer>
   );
 }

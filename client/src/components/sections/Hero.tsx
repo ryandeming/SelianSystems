@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { BookDemoModal } from "./BookDemoModal";
 import heroBg from "@assets/generated_images/contractor_working_in_low_light_or_professional_setting.png";
 
 export function Hero() {
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -38,7 +42,9 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
             <Button
               size="lg"
+              onClick={() => setDemoModalOpen(true)}
               className="bg-primary hover:bg-primary/90 text-background font-bold text-lg h-14 px-8 rounded-full shadow-[0_0_20px_-5px_rgba(255,145,77,0.5)]"
+              data-testid="button-book-demo-hero"
             >
               Book a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -68,6 +74,8 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      <BookDemoModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />
     </section>
   );
 }
