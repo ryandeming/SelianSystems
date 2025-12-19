@@ -143,11 +143,11 @@ export function Features() {
   const [selectedDemo, setSelectedDemo] = useState<string | null>(null);
 
   const demoVideos: Record<string, string> = {
-    "website": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "reviews": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "missed-call": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "marketing": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "seo": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "website": "",
+    "reviews": "",
+    "missed-call": "",
+    "marketing": "",
+    "seo": "",
   };
 
   return (
@@ -180,13 +180,15 @@ export function Features() {
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
                   {feature.description}
                 </p>
-                <button 
-                  onClick={() => setSelectedDemo(feature.id)}
-                  className="text-primary p-0 h-auto text-base font-semibold hover:text-white transition-colors group flex items-center gap-2"
-                >
-                  <Play className="w-4 h-4" />
-                  View Quick Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                {demoVideos[feature.id] && (
+                  <button 
+                    onClick={() => setSelectedDemo(feature.id)}
+                    className="text-primary p-0 h-auto text-base font-semibold hover:text-white transition-colors group flex items-center gap-2"
+                  >
+                    <Play className="w-4 h-4" />
+                    View Quick Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                )}
               </div>
 
               {/* Visual Content */}

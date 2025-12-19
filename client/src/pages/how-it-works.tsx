@@ -12,7 +12,7 @@ export default function HowItWorksPage() {
   });
 
   // Update this URL with your actual video URL (YouTube, Vimeo, or hosted video)
-  const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+  const videoUrl = "";
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-background">
@@ -29,6 +29,7 @@ export default function HowItWorksPage() {
         </div>
 
         {/* Video Section */}
+        {videoUrl && (
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="relative w-full bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/10">
@@ -47,7 +48,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
         </section>
-
+        )}
         <HowItWorks />
       </main>
 

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 
 interface BookDemoModalProps {
@@ -20,6 +21,7 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
     phone: "",
     preferredMethod: "email",
     message: "",
+    consent: false,
   });
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -36,6 +38,12 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.consent) {
+      setErrorMessage("Please confirm that you understand we may contact you.");
+      return;
+    }
+    
     setStatus("loading");
     setErrorMessage("");
 
@@ -71,6 +79,7 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
         phone: "",
         preferredMethod: "email",
         message: "",
+        consent: false,
       });
 
       // Reset after 3 seconds
@@ -209,10 +218,29 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
               </div>
             )}
 
+            <div className="flex items-start gap-3">
+              <Checkbox
+                id="consent"
+                checked={formData.consent}
+                onCheckedChange={(checked) =>
+                  setFormData((prev) => ({ ...prev, consent: checked === true }))
+                }
+                className="mt-0.5"
+                required
+                data-testid="checkbox-consent"
+              />
+              <Label
+                htmlFor="consent"
+                className="text-sm text-white/80 leading-relaxed cursor-pointer"
+              >
+                By submitting this form, I understand that Selian Systems may contact me regarding my inquiry or their services.
+              </Label>
+            </div>
+
             <Button
               type="submit"
-              disabled={status === "loading"}
-              className="w-full bg-primary hover:bg-primary/90 text-background font-bold h-11"
+              disabled={status === "loading" || !formData.consent}
+              className="w-full bg-primary hover:bg-primary/90 text-background font-bold h-11 disabled:opacity-50 disabled:cursor-not-allowed"
               data-testid="button-submit-demo"
             >
               {status === "loading" ? "Submitting..." : "Schedule Demo"}
