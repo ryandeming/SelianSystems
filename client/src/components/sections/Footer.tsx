@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link } from "wouter";
 import { BookDemoModal } from "./BookDemoModal";
 
 export function Footer() {
@@ -38,9 +39,9 @@ export function Footer() {
 
         <div className="grid md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
           <div className="md:col-span-2">
-            <a href="/" className="text-2xl font-display font-black tracking-tighter text-white mb-6 block">
-              SELIAN<span className="text-primary">.</span>
-            </a>
+            <Link href="/" className="text-2xl font-display font-black tracking-tighter text-white mb-6 block cursor-pointer decoration-none">
+              SELIAN<span className="text-primary">SYSTEMS</span>
+            </Link>
             <p className="text-white/60 max-w-sm">
               Simple marketing and CRM tools for contractors. 
               Build. Track. Convert. Get paid.
@@ -50,18 +51,18 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Company</h4>
             <ul className="space-y-4">
-              <li><a href="#" className="text-white/60 hover:text-primary transition-colors">About</a></li>
-              <li><a href="#" className="text-white/60 hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#" className="text-white/60 hover:text-primary transition-colors">Pricing</a></li>
-              <li><button onClick={() => setDemoModalOpen(true)} className="text-white/60 hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0 font-inherit" data-testid="button-contact-footer">Contact</button></li>
+              <li><Link href="/about" className="text-white/60 hover:text-primary transition-colors cursor-pointer decoration-none">About</Link></li>
+              <li><Link href="/how-it-works" className="text-white/60 hover:text-primary transition-colors cursor-pointer decoration-none">How It Works</Link></li>
+              <li><Link href="/pricing" className="text-white/60 hover:text-primary transition-colors cursor-pointer decoration-none">Pricing</Link></li>
+              <li><button onClick={() => setDemoModalOpen(true)} className="text-white/60 hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0 font-inherit text-left" data-testid="button-contact-footer">Contact</button></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-white font-bold mb-6">Legal</h4>
             <ul className="space-y-4">
-              <li><a href="#" className="text-white/60 hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-white/60 hover:text-primary transition-colors">Terms of Service</a></li>
+              <li><Link href="/privacy" className="text-white/60 hover:text-primary transition-colors cursor-pointer decoration-none">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-white/60 hover:text-primary transition-colors cursor-pointer decoration-none">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

@@ -10,6 +10,8 @@ import Pricing from "@/pages/pricing";
 import About from "@/pages/about";
 import HowItWorksPage from "@/pages/how-it-works";
 import Review from "@/pages/review";
+import Privacy from "@/pages/privacy";
+import Terms from "@/pages/terms";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -31,6 +33,8 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/how-it-works" component={HowItWorksPage} />
         <Route path="/review" component={Review} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/terms" component={Terms} />
         <Route component={NotFound} />
       </Switch>
     </>

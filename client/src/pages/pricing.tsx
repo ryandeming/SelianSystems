@@ -43,15 +43,15 @@ export default function Pricing() {
             </div>
 
             <div className="max-w-md mx-auto">
-              <div className="relative">
+              <div className="relative pt-6">
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-3xl opacity-20" />
                 
                 {/* Card */}
-                <div className="relative bg-card border-2 border-primary rounded-3xl p-8 md:p-10 overflow-hidden">
+                <div className="relative bg-card border-2 border-primary rounded-3xl p-8 md:p-10">
                   {/* Most Popular Badge */}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-background font-bold px-4 py-2 rounded-full text-sm uppercase tracking-wider">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <span className="bg-primary text-background font-bold px-4 py-2 rounded-full text-sm uppercase tracking-wider whitespace-nowrap">
                       Most Popular
                     </span>
                   </div>
