@@ -23,7 +23,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-display font-black tracking-tighter text-white cursor-pointer decoration-none">
-          SELIAN<span className="text-primary">.</span>
+          SELIAN<span className="text-primary">SYSTEMS</span>
         </Link>
 
         {/* Desktop Nav */}

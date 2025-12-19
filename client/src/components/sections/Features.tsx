@@ -49,12 +49,35 @@ const features = [
     icon: MessageSquare,
     image: null,
     customVisual: (
-      <div className="w-full h-full bg-card border border-white/10 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-center">
-        <div className="bg-background/50 backdrop-blur rounded-xl p-4 max-w-[80%] mb-4 self-start border border-white/5">
-          <p className="text-sm text-white/80">Hey! I saw you called but I'm on a job. How can I help?</p>
+      <div className="w-full h-full bg-gradient-to-b from-gray-900 to-gray-800 rounded-3xl p-6 relative overflow-hidden flex flex-col justify-end shadow-2xl border border-gray-700">
+        {/* Phone frame */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gray-900 h-8 w-2/3 rounded-b-3xl border-x border-b border-gray-700" />
+        
+        {/* Messages */}
+        <div className="space-y-3 pb-4">
+          {/* Received message */}
+          <div className="flex justify-start">
+            <div className="bg-gray-700 text-white rounded-2xl rounded-tl-md px-4 py-3 max-w-[85%] shadow-lg">
+              <p className="text-sm">Hey! I saw you called but I'm on a job. How can I help?</p>
+              <p className="text-xs text-gray-300 mt-1">2:34 PM</p>
+            </div>
+          </div>
+          
+          {/* Sent message */}
+          <div className="flex justify-end">
+            <div className="bg-blue-500 text-white rounded-2xl rounded-tr-md px-4 py-3 max-w-[85%] shadow-lg">
+              <p className="text-sm font-medium">I need a quote for a panel upgrade.</p>
+              <p className="text-xs text-blue-100 mt-1">2:36 PM</p>
+            </div>
+          </div>
         </div>
-        <div className="bg-primary text-background rounded-xl p-4 max-w-[80%] self-end">
-          <p className="text-sm font-bold">I need a quote for a panel upgrade.</p>
+        
+        {/* Input field */}
+        <div className="flex gap-2 items-end">
+          <input type="text" placeholder="Message..." className="flex-1 bg-gray-700 text-white rounded-2xl px-4 py-2 text-sm placeholder-gray-400 outline-none" disabled />
+          <div className="bg-blue-500 text-white rounded-full p-2 cursor-default">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.6563168,11.6889879 L4.13399899,1.16346272 C3.34915502,0.9 2.40734225,1.00636533 1.77946707,1.4776575 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99021575 L3.03521743,10.4311088 C3.03521743,10.5882061 3.19218622,10.7453035 3.50612381,10.7453035 L16.6915026,11.5307904 C16.6915026,11.5307904 17.1624089,11.5307904 17.1624089,12.0020826 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z" /></svg>
+          </div>
         </div>
       </div>
     ),
@@ -67,18 +90,38 @@ const features = [
     icon: Repeat,
     image: null,
     customVisual: (
-      <div className="w-full h-full bg-gradient-to-br from-blue-900/20 to-background border border-white/10 rounded-2xl p-8 flex items-center justify-center">
-        <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
-          <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
-            <div className="text-2xl font-bold text-white mb-1">24%</div>
-            <div className="text-xs text-white/50">Open Rate</div>
+      <div className="w-full h-full space-y-6">
+        {/* Sample text message above campaigns */}
+        <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-3xl p-4 relative overflow-hidden shadow-xl border border-gray-700">
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gray-900 h-6 w-2/3 rounded-b-2xl border-x border-b border-gray-700" />
+          <div className="space-y-2 mt-4">
+            <div className="flex justify-end">
+              <div className="bg-blue-500 text-white rounded-2xl rounded-tr-md px-3 py-2 max-w-[80%] text-sm">
+                Hey! Special offer: 20% off this month!
+              </div>
+            </div>
+            <div className="flex justify-start">
+              <div className="bg-gray-700 text-white rounded-2xl rounded-tl-md px-3 py-2 max-w-[80%] text-sm">
+                Thanks! I'm interested 👍
+              </div>
+            </div>
           </div>
-          <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
-            <div className="text-2xl font-bold text-primary mb-1">12</div>
-            <div className="text-xs text-white/50">New Jobs</div>
-          </div>
-          <div className="col-span-2 bg-primary hover:bg-primary/90 transition-colors p-4 rounded-lg flex items-center justify-center cursor-pointer">
-            <span className="font-bold text-background">Launch Campaign</span>
+        </div>
+
+        {/* Campaign stats */}
+        <div className="bg-gradient-to-br from-blue-900/20 to-background border border-white/10 rounded-2xl p-6 flex items-center justify-center">
+          <div className="grid grid-cols-2 gap-3 w-full">
+            <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
+              <div className="text-2xl font-bold text-white mb-1">24%</div>
+              <div className="text-xs text-white/50">Open Rate</div>
+            </div>
+            <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
+              <div className="text-2xl font-bold text-primary mb-1">12</div>
+              <div className="text-xs text-white/50">New Jobs</div>
+            </div>
+            <div className="col-span-2 bg-primary hover:bg-primary/90 transition-colors p-3 rounded-lg flex items-center justify-center cursor-pointer">
+              <span className="font-bold text-background text-sm">Launch Campaign</span>
+            </div>
           </div>
         </div>
       </div>
@@ -105,8 +148,7 @@ export function Features() {
             <span className="text-primary">Serious Results.</span>
           </h2>
           <p className="text-white/60 text-lg">
-            No spreadsheets. No fancy dashboards you'll never look at. 
-            Just tools built for people who fix things, not sit in meetings.
+            Tools built for people who fix things, not sit in meetings.
           </p>
         </div>
 
