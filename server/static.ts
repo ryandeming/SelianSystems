@@ -1,4 +1,4 @@
-import express, { type Express } from "express";
+import express, { type Express, Request, Response, NextFunction } from "express";
 import fs from "fs";
 import path from "path";
 
@@ -10,10 +10,25 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  // Serve static files (JS, CSS, images, etc.)
+  app.use(express.static(distPath, {
+    // Don't send 404 for missing files, let it fall through
+    fallthrough: true,
+  }));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  // Catch-all handler: serve index.html for all non-API routes
+  // This allows client-side routing to work
+  app.get("*", (req: Request, res: Response, next: NextFunction) => {
+    // Skip API routes
+    if (req.path.startsWith("/api")) {
+      return next();
+    }
+    
+    // For all other routes, serve index.html
+    res.sendFile(path.resolve(distPath, "index.html"), (err) => {
+      if (err) {
+        next(err);
+      }
+    });
   });
 }
