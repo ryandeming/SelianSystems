@@ -16,16 +16,30 @@ export function serveStatic(app: Express) {
     fallthrough: true,
   }));
 
-  // Catch-all handler: serve index.html for all non-API routes
-  // This allows client-side routing to work
+  // Route handler: check for pre-rendered HTML files first, then fall back to index.html
   app.get("*", (req: Request, res: Response, next: NextFunction) => {
     // Skip API routes
     if (req.path.startsWith("/api")) {
       return next();
     }
-    
-    // For all other routes, serve index.html
-    res.sendFile(path.resolve(distPath, "index.html"), (err) => {
+
+    // Check if there's a pre-rendered HTML file for this route
+    // e.g., /pricing -> dist/public/pricing/index.html
+    let htmlPath: string;
+    if (req.path === "/") {
+      htmlPath = path.join(distPath, "index.html");
+    } else {
+      // Try route-specific directory first
+      const routeHtmlPath = path.join(distPath, req.path, "index.html");
+      if (fs.existsSync(routeHtmlPath)) {
+        htmlPath = routeHtmlPath;
+      } else {
+        // Fall back to root index.html for client-side routing
+        htmlPath = path.join(distPath, "index.html");
+      }
+    }
+
+    res.sendFile(htmlPath, (err) => {
       if (err) {
         next(err);
       }

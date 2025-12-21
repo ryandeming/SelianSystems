@@ -38,6 +38,10 @@ async function buildAll() {
   console.log("building client...");
   await viteBuild();
 
+  console.log("generating static HTML files...");
+  const { prerender } = await import("./prerender.js");
+  await prerender();
+
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
   const allDeps = [
