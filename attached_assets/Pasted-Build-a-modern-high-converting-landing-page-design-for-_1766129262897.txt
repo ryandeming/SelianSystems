@@ -8,7 +8,7 @@ The website should feel bold, confident, and contractor-friendly — no corporat
 - Font style: Bold, readable sans-serif (like Inter, Montserrat, or Poppins).  
 - Imagery: Use background photos of contractors working (realistic, authentic) and icons representing calls, websites, messages, and reviews.  
 - Layout:  
-  - Hero section with headline, subheadline, and CTA (“Book a Demo”).  
+  - Hero section with headline, subheadline, and CTA (“Book a Call”).  
   - Following sections that visually break up into cards or strips for each feature:
       - Functional Website  
       - Review System  

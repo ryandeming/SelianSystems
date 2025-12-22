@@ -11,8 +11,9 @@ const features = [
   "Automated Lead Followup",
   "Missed Call Text Back",
   "5-Star Review Machine",
-  "One-Click Marketing Campaigns",
-  "On-Site SEO"
+  "On-Site & Local SEO",
+  "Phone App for Easy Access",
+  "Business Phone Number"
 ];
 
 export default function Pricing() {

@@ -88,54 +88,12 @@ const features = [
     reverse: false
   },
   {
-    id: "marketing",
-    title: "One‑Click Marketing Campaigns",
-    description: "Keep it simple. Reactivate old customers with special offers and get referrals automatically. Push one button, we handle the rest.",
-    icon: Repeat,
-    image: null,
-    customVisual: (
-      <div className="w-full h-full space-y-6">
-        {/* Sample text message above campaigns */}
-        <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-3xl p-4 relative overflow-hidden shadow-xl border border-gray-700">
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gray-900 h-6 w-2/3 rounded-b-2xl border-x border-b border-gray-700" />
-          <div className="space-y-2 mt-4">
-            <div className="flex justify-end">
-              <div className="bg-blue-500 text-white rounded-2xl rounded-tr-md px-3 py-2 max-w-[80%] text-sm">
-                Hey Josh, it's Mike from MainLineFlow. It was a pleasure working with you! I'm offering 10% off your next job and this discount applies to your friends and family as well :)
-              </div>
-            </div>
-            <div className="flex justify-start">
-              <div className="bg-gray-700 text-white rounded-2xl rounded-tl-md px-3 py-2 max-w-[80%] text-sm">
-                Thanks! I'll tell my brother
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Campaign stats */}
-        <div className="bg-gradient-to-br from-blue-900/20 to-background border border-white/10 rounded-2xl p-6 flex items-center justify-center">
-          <div className="grid grid-cols-2 gap-3 w-full">
-            <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
-              <div className="text-2xl font-bold text-white mb-1">24%</div>
-              <div className="text-xs text-white/50">Open Rate</div>
-            </div>
-            <div className="bg-card p-4 rounded-lg border border-white/10 text-center hover:border-primary/50 transition-colors">
-              <div className="text-2xl font-bold text-primary mb-1">12</div>
-              <div className="text-xs text-white/50">New Jobs</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
-    reverse: true
-  },
-  {
     id: "seo",
     title: "Local SEO That Actually Works",
     description: "No fake promises. We help you rank for your city and your services. Stop paying for cold leads—build your own pipeline instead.",
     icon: MapPin,
     image: seoImg,
-    reverse: false
+    reverse: true
   }
 ];
 
@@ -146,7 +104,6 @@ export function Features() {
     "website": "",
     "reviews": "",
     "missed-call": "",
-    "marketing": "",
     "seo": "",
   };
 

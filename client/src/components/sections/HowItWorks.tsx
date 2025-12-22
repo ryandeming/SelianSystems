@@ -72,7 +72,7 @@ export function HowItWorks() {
               className="bg-primary hover:bg-primary/90 text-background font-bold text-lg h-14 px-12 rounded-full shadow-[0_0_20px_-5px_rgba(255,145,77,0.5)]"
               data-testid="button-book-demo-how-it-works"
             >
-              Book a Demo
+              Book a Call
             </Button>
           </div>
         </div>

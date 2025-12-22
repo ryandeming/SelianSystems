@@ -24,7 +24,7 @@ export function Footer() {
                 className="bg-background text-primary hover:bg-white font-bold text-lg h-14 px-10 rounded-full"
                 data-testid="button-book-demo-footer"
               >
-                Book Your Demo
+                Book a Call
               </Button>
             </div>
           </div>

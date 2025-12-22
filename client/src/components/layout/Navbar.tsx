@@ -44,7 +44,7 @@ export function Navbar() {
             className="bg-primary hover:bg-primary/90 text-background font-bold rounded-full px-6"
             data-testid="button-book-demo-nav"
           >
-            Book a Demo
+            Book a Call
           </Button>
         </div>
 
@@ -69,7 +69,7 @@ export function Navbar() {
                 className="bg-primary hover:bg-primary/90 text-background font-bold w-full"
                 data-testid="button-book-demo-mobile"
               >
-                Book a Demo
+                Book a Call
               </Button>
             </div>
           </SheetContent>

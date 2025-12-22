@@ -97,7 +97,7 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-card border-white/10 max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-display font-bold text-white">Book Your Demo</DialogTitle>
+          <DialogTitle className="text-2xl font-display font-bold text-white">Book a Call</DialogTitle>
           <p className="text-sm text-white/60 mt-2">Tell us about your business and we'll get you set up.</p>
         </DialogHeader>
 

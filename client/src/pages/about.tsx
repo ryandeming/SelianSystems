@@ -161,7 +161,7 @@ export default function About() {
               className="bg-primary hover:bg-primary/90 text-background font-bold text-lg h-14 px-10 rounded-full shadow-[0_0_20px_-5px_rgba(255,145,77,0.5)]"
               data-testid="button-book-demo-about"
             >
-              Book a Demo
+              Book a Call
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
