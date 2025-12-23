@@ -12,6 +12,7 @@ import HowItWorksPage from "@/pages/how-it-works";
 import Review from "@/pages/review";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -47,6 +48,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <ChatWidget />
       </TooltipProvider>
     </QueryClientProvider>
   );
