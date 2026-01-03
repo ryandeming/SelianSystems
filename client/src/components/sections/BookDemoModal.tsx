@@ -22,6 +22,7 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
     preferredMethod: "email",
     message: "",
     consent: false,
+    consentMarketing: false,
   });
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -233,10 +234,9 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
                 htmlFor="consent"
                 className="text-sm text-white/80 leading-relaxed cursor-pointer"
               >
-                By submitting this form, I understand that Selian Systems may contact me regarding my inquiry or their services.
+                I understand Selian Systems may call or text me about my inquiry, service, and feedback.
               </Label>
             </div>
-
             <Button
               type="submit"
               disabled={status === "loading" || !formData.consent}
@@ -245,6 +245,10 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
             >
               {status === "loading" ? "Submitting..." : "Schedule Demo"}
             </Button>
+            <p className="text-xs text-white/60 leading-tight">
+              Msg & data rates may apply. Reply STOP to opt out.
+            </p>
+
           </form>
         )}
       </DialogContent>

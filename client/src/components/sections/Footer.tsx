@@ -70,6 +70,9 @@ export function Footer() {
         <div className="text-center text-white/40 text-sm">
           © {new Date().getFullYear()} Selian Systems. All rights reserved.
         </div>
+        <div className="text-center text-white/40 text-sm">
+          Selian Systems is a DBA of INNOVUS, LLC.
+        </div>
       </div>
 
       <BookDemoModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />

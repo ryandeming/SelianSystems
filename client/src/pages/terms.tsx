@@ -63,6 +63,45 @@ export default function Terms() {
             </section>
 
             <section>
+              <h2 className="text-2xl font-bold text-white mb-4">4.1. Consent to Receive Communications</h2>
+              <p className="text-white/80 leading-relaxed mb-4">
+                By providing your phone number to Selian Systems, you expressly consent to receive automated text messages (SMS) and phone calls from us. This consent is not a condition of purchase, but is required to receive certain services and communications.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Types of Communications:</strong> You may receive text messages and phone calls for:
+              </p>
+              <ul className="list-disc list-inside text-white/80 space-y-2 ml-4 mb-4">
+                <li>Service-related notifications and updates</li>
+                <li>Account management and security alerts</li>
+                <li>Appointment reminders and scheduling confirmations</li>
+                <li>Customer support and assistance</li>
+              </ul>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Message Frequency:</strong> The frequency of messages and calls will vary based on your account activity and preferences. Service-related messages may be sent as needed.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Opt-Out Rights:</strong> You have the right to opt out of receiving text messages at any time by:
+              </p>
+              <ul className="list-disc list-inside text-white/80 space-y-2 ml-4 mb-4">
+                <li>Replying "STOP" to any text message you receive from us</li>
+                <li>Contacting us directly at the contact information provided in these Terms</li>
+                <li>Updating your communication preferences in your account settings</li>
+              </ul>
+              <p className="text-white/80 leading-relaxed mb-4">
+                You may opt out of receiving phone calls by requesting to be added to our do-not-call list.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Message and Data Rates:</strong> Standard message and data rates may apply to text messages sent to and received from us. Please consult your mobile carrier for details about your messaging plan.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Carrier Support:</strong> Our text messaging service is supported by major carriers including AT&T, T-Mobile, Verizon, Sprint, and others. Carrier coverage and message delivery are not guaranteed, and we are not liable for delayed or undelivered messages.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                <strong>Help and Support:</strong> For help with text messages, reply "HELP" to any message you receive, or contact us using the contact information provided in these Terms of Service.
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-bold text-white mb-4">5. Payment Terms</h2>
               <p className="text-white/80 leading-relaxed mb-4">
                 Our services are provided on a subscription basis. By subscribing, you agree to:

@@ -58,6 +58,33 @@ export default function Privacy() {
             </section>
 
             <section>
+              <h2 className="text-2xl font-bold text-white mb-4">3.1. Text Messaging and Phone Calls</h2>
+              <p className="text-white/80 leading-relaxed mb-4">
+                By providing your phone number to Selian Systems, you consent to receive text messages (SMS) and phone calls from us. We may use automated technology to send you text messages and make phone calls for the following purposes:
+              </p>
+              <ul className="list-disc list-inside text-white/80 space-y-2 ml-4 mb-4">
+                <li>Service-related communications (account updates, appointment reminders, service notifications)</li>
+                <li>Customer support and assistance</li>
+                <li>Important updates about our services</li>
+              </ul>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Message Frequency:</strong> Message frequency varies. You may receive messages as needed for service-related communications.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Message and Data Rates:</strong> Standard message and data rates may apply. Please check with your mobile carrier for details about your messaging plan.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Opt-Out:</strong> You may opt out of receiving text messages at any time by replying "STOP" to any text message you receive from us, or by contacting us directly. You may opt out of receiving phone calls by requesting to be added to our do-not-call list. After opting out, you may still receive service-related messages that are necessary for the operation of your account.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                <strong>Help:</strong> For assistance with text messages, reply "HELP" to any message you receive, or contact us at the information provided in the Contact Us section.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                <strong>Carrier Information:</strong> We are not liable for delayed or undelivered messages. Supported carriers include, but are not limited to: AT&T, T-Mobile, Verizon, Sprint, and other major carriers. Carrier coverage is not guaranteed.
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-bold text-white mb-4">4. Information Sharing and Disclosure</h2>
               <p className="text-white/80 leading-relaxed mb-4">
                 We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:

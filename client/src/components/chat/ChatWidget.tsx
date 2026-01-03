@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { MessageCircle, X, Send, CheckCircle2 } from "lucide-react";
 
 export function ChatWidget() {
@@ -22,6 +24,7 @@ export function ChatWidget() {
     lastName: "",
     phone: "",
     message: "",
+    consent: false,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,6 +34,12 @@ export function ChatWidget() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.consent) {
+      setErrorMessage("Please confirm that you understand we may contact you.");
+      return;
+    }
+    
     setIsSubmitting(true);
     setErrorMessage("");
 
@@ -62,7 +71,7 @@ export function ChatWidget() {
       setSubmittedData({ ...formData });
       setIsSubmitting(false);
       setIsSubmitted(true);
-      setFormData({ firstName: "", lastName: "", phone: "", message: "" });
+      setFormData({ firstName: "", lastName: "", phone: "", message: "", consent: false });
       
       // Delay showing the success message by 1 second
       setTimeout(() => {
@@ -231,9 +240,26 @@ export function ChatWidget() {
                 required
                 className="bg-background/50 border-white/10 text-white placeholder-white/40 resize-none focus:border-primary"
               />
+              <div className="flex items-start gap-2">
+                <Checkbox
+                  id="chat-consent"
+                  checked={formData.consent}
+                  onCheckedChange={(checked) =>
+                    setFormData((prev) => ({ ...prev, consent: checked === true }))
+                  }
+                  className="mt-0.5"
+                  required
+                />
+                <Label
+                  htmlFor="chat-consent"
+                  className="text-xs text-white/70 leading-relaxed cursor-pointer"
+                >
+                  By submitting this form, I understand that Selian Systems may contact me regarding my inquiry or their services.
+                </Label>
+              </div>
               <Button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !formData.consent}
                 className="w-full bg-primary hover:bg-primary/90 text-background font-bold h-10 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
