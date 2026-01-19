@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { AlertCircle, CheckCircle2, Link } from "lucide-react";
+import { AlertCircle, CheckCircle2 } from "lucide-react";
 
 interface BookDemoModalProps {
   open: boolean;
@@ -237,10 +237,11 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
                 htmlFor="consent"
                 className="text-sm text-white/80 leading-relaxed cursor-pointer"
               >
-                I agree to the
-                <Link href="/terms" className="text-white/80 underline">Terms & Conditions</Link> and
-                <Link href="/privacy" className="text-white/80 underline">Privacy Policy</Link> provided by SelianSystems. By providing
-                my phone number, I agree to receive text messages and phone calls from SelianSystems regarding my inquiry or their services.
+                I agree to the{" "}
+                <a href="/terms" className="text-primary hover:text-primary/80 underline" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>{" "}
+                and{" "}
+                <a href="/privacy" className="text-primary hover:text-primary/80 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>{" "}
+                provided by SelianSystems. By providing my phone number, I agree to receive text messages and phone calls from SelianSystems regarding my inquiry or their services.
               </Label>
             </div>
             <Button

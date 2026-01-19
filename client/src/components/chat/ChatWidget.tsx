@@ -254,11 +254,12 @@ export function ChatWidget() {
                   htmlFor="chat-consent"
                   className="text-xs text-white/70 leading-relaxed cursor-pointer"
                 >
-                  I agree to the
-                <Link href="/terms" className="text-white/80 underline">Terms & Conditions</Link> and
-                <Link href="/privacy" className="text-white/80 underline">Privacy Policy</Link> provided by SelianSystems. By providing
-                my phone number, I agree to receive text messages and phone calls from SelianSystems regarding my inquiry or their services.
-                </Label>
+                 I agree to the{" "}
+                <a href="/terms" className="text-primary hover:text-primary/80 underline" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>{" "}
+                and{" "}
+                <a href="/privacy" className="text-primary hover:text-primary/80 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>{" "}
+                provided by SelianSystems. By providing my phone number, I agree to receive text messages and phone calls from SelianSystems regarding my inquiry or their services.
+              </Label>
               </div>
               <Button
                 type="submit"
