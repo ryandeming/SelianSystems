@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { AlertCircle, CheckCircle2 } from "lucide-react";
+import { AlertCircle, CheckCircle2, Link } from "lucide-react";
 
 interface BookDemoModalProps {
   open: boolean;
@@ -65,6 +65,8 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
           source: "webform",
           preferred_contact_method: formData.preferredMethod,
           details: formData.message,
+          consent: formData.consent,
+          consent_marketing: formData.consentMarketing,
         }),
       });
 
@@ -81,6 +83,7 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
         preferredMethod: "email",
         message: "",
         consent: false,
+        consentMarketing: false,
       });
 
       // Reset after 3 seconds
@@ -234,7 +237,10 @@ export function BookDemoModal({ open, onOpenChange }: BookDemoModalProps) {
                 htmlFor="consent"
                 className="text-sm text-white/80 leading-relaxed cursor-pointer"
               >
-                I understand Selian Systems may call or text me about my inquiry, service, and feedback.
+                I agree to the
+                <Link href="/terms" className="text-white/80 underline">Terms & Conditions</Link> and
+                <Link href="/privacy" className="text-white/80 underline">Privacy Policy</Link> provided by SelianSystems. By providing
+                my phone number, I agree to receive text messages and phone calls from SelianSystems regarding my inquiry or their services.
               </Label>
             </div>
             <Button

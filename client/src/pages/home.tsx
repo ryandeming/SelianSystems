@@ -10,9 +10,9 @@ import { useMetaTags } from "@/hooks/use-meta-tags";
 export default function Home() {
   useMetaTags({
     title: "Selian Systems - Websites & Automation for Contractors",
-    description: "Cut the BS. Get paid. Simple marketing and CRM tools for plumbers, electricians, and contractors. Build. Track. Convert. Get paid.",
+    description: "Cut the BS. Get more jobs. Simple marketing and CRM tools for plumbers, electricians, and contractors. Build. Track. Convert. Get paid.",
     ogTitle: "Selian Systems - Websites & Automation for Contractors",
-    ogDescription: "Cut the BS. Simple marketing and CRM tools for plumbers, electricians, and contractors. Build. Track. Convert. Get paid.",
+    ogDescription: "Cut the BS. Get more jobs. Simple marketing and CRM tools for plumbers, electricians, and contractors. Build. Track. Convert. Get paid.",
   });
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-background">

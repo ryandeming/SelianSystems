@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { MessageCircle, X, Send, CheckCircle2 } from "lucide-react";
+import { MessageCircle, X, Send, CheckCircle2, Link } from "lucide-react";
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -254,7 +254,10 @@ export function ChatWidget() {
                   htmlFor="chat-consent"
                   className="text-xs text-white/70 leading-relaxed cursor-pointer"
                 >
-                  By submitting this form, I understand that Selian Systems may contact me regarding my inquiry or their services.
+                  I agree to the
+                <Link href="/terms" className="text-white/80 underline">Terms & Conditions</Link> and
+                <Link href="/privacy" className="text-white/80 underline">Privacy Policy</Link> provided by SelianSystems. By providing
+                my phone number, I agree to receive text messages and phone calls from SelianSystems regarding my inquiry or their services.
                 </Label>
               </div>
               <Button

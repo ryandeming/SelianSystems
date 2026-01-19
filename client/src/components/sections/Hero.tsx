@@ -31,7 +31,7 @@ export function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl max-w-4xl font-display font-black text-white leading-[1.1] mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
             CUT THE BS.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">
-              GET PAID.
+              GET MORE JOBS.
             </span>
           </h1>
 
